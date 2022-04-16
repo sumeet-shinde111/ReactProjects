@@ -1,0 +1,28 @@
+.data{
+    display: flex;
+    flex-direction: column;
+}
+form{
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+p{
+    text-align: center;
+}
+input{
+    margin: 10px;
+    width: 400px;
+    padding: 10px;
+}
+
+#firstname,#lastname{
+    display: block;
+} 
+button{
+    margin: 10px;
+    padding: 10px 20px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+}
