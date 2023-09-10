@@ -1,0 +1,193 @@
+
+body{
+   background: #2D2D2D;
+   margin: 0;
+   padding: 0;
+}
+.childContainer{
+   width: 45%;
+   display: flex;
+   flex-direction: column;
+   margin: 40px auto 0px auto;
+   font-size: 22px;
+   font-weight: 600;
+   line-height: 45px;
+ }
+
+ .wrapper{
+   position: relative;
+   display: flex;
+   flex-direction: row;
+   justify-content: center;
+   margin-bottom: 15px;
+   margin: 0 auto;
+   width: 95%;
+ }
+.heading{
+   width: 25%;
+   display: flex;
+   justify-content: center;
+   margin: 25px auto;
+}
+
+ .todo{
+   color: #fff;
+   margin-right: 2px;
+   border-bottom: 3px solid #ff0050;
+ }
+
+ .list{
+   color: #ff0050;
+   border-bottom: 3px solid #fff;
+   margin-left: 2px;
+ }
+ #userInput{
+   position: relative;
+   width: 100%;
+   height: 38px;
+   padding: 5px 10px;
+   border-radius: 8px;
+   border: 1px solid #ff0050;
+   font-size: 20px;
+ }
+
+ .add{
+   right: 0;
+   position: absolute;
+   background: #ff0050;
+   border: 1px solid;
+   width: 47px;
+   height: 50px;
+   border-radius: 8px;
+   color: #fff;
+   font-size: 29px;
+   border: none;
+   cursor: pointer;
+ }
+ .update, .clear, .cancel{
+   background: #ff0050;
+   border-radius: 8px;
+   color: #fff;
+   font-size: 23px;
+   border: none;
+   cursor: pointer;
+   padding: 5px 20px;
+   text-transform: capitalize;
+   margin:10px;
+ }
+ .controlBtns{
+   display: flex;
+   flex-direction: column;
+ }
+ .listWrapper{
+   width: 80%;
+   margin: 20px auto;
+   max-height:550px;
+   overflow-y: auto;
+ }
+ ul{
+   list-style: none;
+   padding: 0;
+   width: 95%;
+   margin: 0 auto;
+ }
+
+ li{
+   background: #fff;
+   color: #000;
+   border: 1.5px solid #d8723b;
+   margin: 5px 0px;
+   border-radius: 12px;
+   cursor: pointer;
+   transition: transform .2s;
+ }
+.item{
+   display: flex;
+   flex-direction: row;
+   justify-content: space-between;
+   align-items: center;
+   padding: 13px 10px 13px 21px;
+   border-radius: 10px;
+}
+.itemName{
+   text-align: left;
+   width: 70%;
+   word-break: break-all;
+   text-transform: capitalize;
+}
+.controls{
+   font-size: 24px;
+   width: 30%;
+   display: flex;
+   flex-direction: row;
+   justify-content: space-evenly;
+}
+
+li:hover{
+   background: #ff0050;
+   color: #fff;
+   border: 1px solid #000;
+}
+
+.edit:hover , .delete:hover{
+   color: #000;
+}
+
+.column{
+   display: flex;
+   flex-direction: column;
+}
+
+.newItemAdded{
+   background: #098e09;
+   color: #fff;
+   border: 1px solid #ff0050;
+}
+
+.toastNotification{
+   color: #fff;
+}
+.listWrapper::-webkit-scrollbar{
+   width:5px;
+   background-color:#000;
+   }
+   
+.listWrapper::-webkit-scrollbar-thumb{
+   background:#ff0050;;
+   border-radius:5px;
+}
+
+/*-------------- media query --------------*/
+
+@media screen and (min-width: 320px) and (max-width:767px){
+   .childContainer{
+      width: 90%;
+      font-size: 18px;
+   }
+   .listWrapper{
+      width: 90%;
+   }
+   #userInput{
+      width: 96%;
+      font-size: 16px;
+   }
+   .controls{
+      font-size: 17px;
+   }
+   .update, .clear, .cancel{
+      font-size: 14px;
+   }
+   .item{
+      padding: 13px 10px 13px 10px;
+   }
+   .itemName{
+      width: unset;
+      font-size: 16px;
+   } 
+}
+
+@media screen and (min-width: 768px) and (max-width:1023px){
+   .childContainer{
+      width: 70%;
+   }
+}
