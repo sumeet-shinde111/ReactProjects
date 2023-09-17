@@ -112,7 +112,7 @@ body{
 .itemName{
    text-align: left;
    width: 70%;
-   word-break: break-all;
+   word-break: break-word;
    text-transform: capitalize;
 }
 .controls{
@@ -155,6 +155,11 @@ li:hover{
 .listWrapper::-webkit-scrollbar-thumb{
    background:#ff0050;;
    border-radius:5px;
+}
+
+.completed{
+   background-color: #098e09;
+   color: #fff;
 }
 
 /*-------------- media query --------------*/

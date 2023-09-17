@@ -78,13 +78,10 @@ const TodoList = () => {
     };
 
     const update = (id) => {
-        const updatedValue = listItems.splice(id, 1, inputValue);
         if (inputValue.length === 0) {
             alert("Empty value");
         } else {
-            setListItems((oldItems) => {
-                return [...oldItems, updatedValue];
-            });
+            listItems[id] = inputValue;
             localStorage.setItem("list", JSON.stringify(listItems));
             setToggle({
                 value:true,
@@ -137,8 +134,8 @@ const TodoList = () => {
                                 listItems.map((value, index) => {
                                     return (
                                         <li key={index}>
-                                            <div className={`item`} >
-                                                <span className="itemName" id={index}>{value}</span>
+                                            <div className={`item`}  >
+                                                <span className="itemName" id={index}>{index + 1})  {value}</span>
                                                 <div className="controls">
                                                     <PencilSquare 
                                                         className="controlBtns edit" 
