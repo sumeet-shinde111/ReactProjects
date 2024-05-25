@@ -6,6 +6,7 @@ function App() {
     firstname:"",
     lastname:"",
     email:"",
+    gender:"",
   });
 
   const getFormValues = (e)=>{
@@ -24,14 +25,20 @@ function App() {
   return (
     <div className="App">
      <h1>Multi input form handling</h1>
-    <form onSubmit = {showData}>
-      <input type = "text" name = "firstname" placeholder = "firstname" value={data.firstname} onChange = {getFormValues}></input>
-      <input type = "text" name="lastname" placeholder = "lastname" value={data.lastname} onChange = {getFormValues}></input>
-      <input type = "text" name ="email" placeholder = "email" value={data.email} onChange = {getFormValues}></input>
-      <input type = "submit"></input>
-    </form>
+      <form onSubmit = {showData}>
+        <input type = "text" name = "firstname" placeholder = "firstname" value={data.firstname} onChange = {getFormValues}></input>
+        <input type = "text" name="lastname" placeholder = "lastname" value={data.lastname} onChange = {getFormValues}></input>
+        <input type = "text" name ="email" placeholder = "email" value={data.email} onChange = {getFormValues}></input>
 
+        
+        <input type='radio' name = "gender" value="male" checked = {data.gender === "male"} onChange={getFormValues}/>
+        <label>Male</label>
+        
+        <input type='radio' name = "gender" value="female" checked ={data.gender === "female"} onChange={getFormValues}/>
+        <label>Female</label>
 
+        <input type = "submit"></input>
+      </form>
     </div>
   );
 }
