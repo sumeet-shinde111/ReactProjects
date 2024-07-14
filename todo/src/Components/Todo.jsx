@@ -18,7 +18,12 @@ export const Todo = ()=>{
             setList((prevList)=>{
                 return[...prevList,inputValue];
             })
+            clearInputBox();
         }
+    }
+
+    const clearInputBox = ()=>{
+        setInputValue("");
     }
    
     return(
