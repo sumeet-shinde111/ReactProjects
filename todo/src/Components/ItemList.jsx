@@ -1,11 +1,16 @@
 
-export const ItemList = ()=>{
+export const ItemList = ({listItem})=>{
     return(
         <>
-            <div className="container">
-                
-            </div>
-        
+        <ul>
+            {
+                listItem.map((item,index)=>{
+                    return(
+                    <li key={index}>{item}</li>
+                    )
+                })
+            }
+        </ul>
         </>
     )
 }

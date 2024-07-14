@@ -22,21 +22,11 @@ export const Todo = ()=>{
         }
     }
 
-
-   
     return(
         <>
             <h1>Todo</h1>
             <FormInput handleformSubmittion = {handleForm}/>
-             <ul>
-                {
-                    list.map((item,index)=>{
-                        return(
-                            <li key={index}>{item}</li>
-                        )
-                    })
-                }
-             </ul>
+            <ItemList listItem={list}/>
         </>
     )
 }
