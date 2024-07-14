@@ -15,10 +15,15 @@ export const Todo = ()=>{
         if(!inputValue){
             return
         }else{
-            setList((prevList)=>{
-                return[...prevList,inputValue];
-            })
-            clearInputBox();
+            if(list.includes(inputValue)){
+                alert("Item already exists")
+            }else{
+                setList((prevList)=>{
+                    return[...prevList,inputValue];
+                })
+                clearInputBox();
+            }
+           
         }
     }
 
