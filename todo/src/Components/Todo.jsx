@@ -15,8 +15,9 @@ export const Todo = ()=>{
         if(!inputValue){
             return
         }else{
-            (list.includes(inputValue)) ?  alert("Item already exists") : setList([...list,inputValue]);
-            
+            setList((prevList)=>{
+                return[...prevList,inputValue];
+            })
         }
     }
    
@@ -27,6 +28,15 @@ export const Todo = ()=>{
                 <input type="text" placeholder = "Enter Todo item" value={inputValue} onChange={getInputValue}/>
                 <button type="submit">Add item</button>
              </form>
+             <ul>
+                {
+                    list.map((item,index)=>{
+                        return(
+                            <li key={index}>{item}</li>
+                        )
+                    })
+                }
+             </ul>
         </>
     )
 }
